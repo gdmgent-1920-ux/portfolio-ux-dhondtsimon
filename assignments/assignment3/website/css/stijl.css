@@ -1,0 +1,610 @@
+html{
+  scroll-behavior: smooth;
+}
+body{
+	font-family: 'Open Sans', sans-serif; 
+}
+img{
+	width: 100%;
+}
+nav{
+	font-family: 'Open Sans', sans-serif;
+}
+main{
+	width: 75%;
+	margin: 0 auto;
+}
+h1{
+	text-align: center;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-size: 5vw;
+	color: white;
+	padding-top: 22%;
+	padding-bottom: 1%;
+}
+#quote{
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 2vw;
+	color: white;
+	font-weight: 600;
+}
+h2{
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-weight: 500;
+	font-size: 3em;
+	padding-bottom: 1%; 
+}
+p{
+	font-size: 1.1em;
+	line-height: 150%;
+}
+
+/*navigatie*/
+
+#top{
+    position: fixed;
+    z-index: 200;
+    font-weight: 600;
+}
+#top a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#top a:hover
+{
+  color: tomato;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+#beschrijving #menuToggle{
+	top: 0;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0;
+  z-index: 2;
+  
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 138px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  height: 100vh;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+nav img{
+	width: 30%;
+}
+
+/*header*/
+
+header{
+    background-image: url(../images/banner.png);
+    background-position: center;
+    background-size: 75%;
+    height: 800px;
+    background-repeat: no-repeat;
+}
+#banner{
+    background-image: url(../images/bannershop.png);
+    background-position: center;
+    background-size: 75%;
+    height: 500px;
+    background-repeat: no-repeat;
+}
+#beschrijving{
+	height: 0;
+}
+/*homepagina*/
+
+#intro{
+	display: flex;
+	flex-direction: row;
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+#intro figure{
+	width: 21%;
+	padding-left: 5%;
+}
+
+#intro section{
+	width: 45%;
+	margin-left: 20%;
+}
+
+/*shopoverzicht*/
+
+#p2flex{
+	display: flex;
+	flex-direction: row;
+}
+
+#winkel{
+	width: 90%;
+	margin: 0 auto;
+	padding-top: 3%;
+}
+#winkel a{
+	cursor: pointer;
+}
+#winkel h2{
+	margin-left: 17.2%;
+	color: #484848;
+	padding-top: 3%;
+	padding-bottom: 1%;
+}
+#shop{
+	background-color: gainsboro;
+}
+#rij1, #rij2, #rij3{
+	display: flex;
+	flex-direction: row;
+	width: 75%;
+	margin: 0 auto;
+	padding-bottom: 3%;
+}
+#rij1 h4, #rij1 blockquote{
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	background-color: #484848;
+	color: white;
+	margin-top: -2px;
+}
+#rij2 h4, #rij2 blockquote{
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	background-color: #484848;
+	color: white;
+	margin-top: -2px;
+}
+#rij3 h4, #rij3 blockquote{
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	background-color: #484848;
+	color: white;
+	margin-top: -2px;
+}
+#rij1 section, #rij2 section, #rij3 section{
+	width: 20%;
+	border: 3px solid #484848;
+	margin: 0 auto; 
+}
+#rij1 figure, #rij2 figure, #rij3 figure{
+	text-align: center;
+	width: 100%;
+}
+
+/*productbeschrijving*/
+
+#product figure{
+	width: 50%;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	padding-left: 3%;
+} 
+#product{
+	display: flex;
+	flex-direction: row;
+	background-color: gainsboro;
+	margin-top: 5%;
+}
+#product section{
+	width: 75%;
+}
+#product h2{
+	width: 75%;
+	margin:0 auto;
+	padding-top: 3%;
+}
+#product blockquote{
+	width: 75%;
+	margin:0 auto;
+	padding-top: 2%;
+	padding-bottom: 3%;
+	font-size: 1.2em;
+	font-weight: 600;
+}
+#product h3{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-size: 1.3em;
+	width: 75%;
+	margin: 0 auto;
+	padding-top: 2%;
+	padding-bottom: 1%;
+}
+#product p{
+	width: 75%;
+	margin: 0 auto;
+	font-size: 0.9em;
+}
+#buttons{
+	display: flex;
+	flex-direction: column;
+}
+button {
+	width: 25%;
+	margin-left: 12%;
+	margin-top: 2%;
+	cursor: pointer;
+  display: inline-block;
+  padding: 10px 19px;
+  top: 0;
+  font-weight: 600;
+  border-radius: 5px;
+  border-bottom: 1px solid rgba( 28, 227, 125, 0.5 );
+  background: #358a8c;
+  color: #fff;
+  box-shadow: 0px 0px 0px rgba( 15, 165, 60, 0.1 );
+  
+  -webkit-transform: translateZ(0);
+     -moz-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+          transform: translateZ(0);
+  
+  -webkit-transition: all 0.2s ease;
+     -moz-transition: all 0.2s ease;
+      -ms-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+}
+
+button:hover {
+  top: -10px;
+  box-shadow: 0px 10px 10px rgba( 15, 165, 60, 0.2 );
+  
+  -webkit-transform: rotateX(20deg);
+     -moz-transform: rotateX(20deg);
+      -ms-transform: rotateX(20deg);
+          transform: rotateX(20deg);
+}
+
+button:active {
+  top: 0px;
+  box-shadow: 0px 0px 0px rgba( 15, 165, 60, 0.0 );
+  background: #565656;
+}
+#buttonindex{
+  margin-left: 40%;
+  margin-top: 0;
+}
+#buttonindex a{
+  text-decoration: none;
+  color: white;
+}
+#return{
+	margin-bottom: 5%;
+}
+#return a{
+	text-decoration: none;
+	color: white;
+}
+#add a{
+  text-decoration: none;
+  color: white;
+}
+#add{
+	margin-top: 13%;
+}
+/*Footer*/
+
+.footer-distributed{
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+
+  padding: 45px 50px;
+  margin-top: 80px;
+}
+
+.footer-distributed .footer-left p{
+  color:  #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+
+.footer-distributed p.footer-links{
+  font-size:18px;
+  font-weight: bold;
+  color:  #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.footer-distributed p.footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color:  inherit;
+}
+
+.footer-distributed .footer-right{
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color:  #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-left: 3px;
+}
+
+@media only screen and (min-width:320px) and (max-width:600px){
+
+		#menu{
+			width: 70px;
+		}
+		header{
+	    background-size: 100%;
+	    height: 200px;
+		}
+		h1{
+		font-size: 2em;
+		padding-top: 15%;
+		padding-bottom: 3%;
+		}
+		#quote{
+			font-size: 1.3em;
+		}
+
+		/*homepagina*/
+		button{
+			width: 50%;
+			margin: 0 auto;
+		}
+		#buttonindex{
+		margin-top: 5%;
+		margin-left: 25%;
+		}    
+		#intro{
+			flex-direction: column;
+			padding-top: 5%;
+			padding-bottom: 5%;
+			width: 100%;
+			margin: 0 auto;
+		}
+		#intro figure{
+			width: 85%;
+			padding-left: 0;
+			margin-left: 0;
+		}
+		#intro section{
+			width: 95%;
+			margin: 0 auto;
+			padding-top: 5%;
+			padding-bottom: 10%;
+			margin-left: 0;
+		}
+		h2{
+			font-size: 1.8em;
+		}
+		/*shopoverzicht*/
+
+		#banner{
+		background-size: 100%;
+		height: 100px;
+		background-repeat: no-repeat;
+		}
+		#shop{
+			width: 90%;
+		}
+		#p2flex{
+			flex-direction: column;
+		}
+		#winkel{
+			width: 90%;
+			padding-top: 10%;
+		}
+		#rij1, #rij2, #rij3{
+			flex-direction: column;
+			width: 90%;
+			margin: 0 auto;
+		}
+		#rij1 h4, #rij1 blockquote{
+			padding-top: 5%;
+			padding-bottom: 3%;
+			margin-top: -2px;
+		}
+		#rij2 h4, #rij2 blockquote{
+			padding-top: 5%;
+			padding-bottom: 3%;
+			margin-top: -2px;
+		}
+		#rij3 h4, #rij3 blockquote{
+			padding-top: 5%;
+			padding-bottom: 3%;
+			margin-top: -2px;
+		}
+		#rij1 section, #rij2 section, #rij3 section{
+			width: 75%; 
+			margin-bottom: 10%;
+		}
+
+		/*productbeschrijving*/
+		#product{
+			width: 90%;
+		}
+
+		#product figure{
+			width: 100%;
+			padding: 0;
+		} 
+		#product{
+			flex-direction: column;
+			margin-top: 5%;
+		}
+		#product section{
+			width: 100%;
+		}
+		#product h2{
+			padding-top: 0%;
+			width: 90%;
+			text-align: center;
+		}
+		#product blockquote{
+			font-size: 1.5em;
+			width: 90%;
+
+		}
+		#product h3{
+			width: 90%;
+			padding-top: 6%;
+			padding-bottom: 2%;
+		}
+		#product p{
+			width: 90%;
+			margin: 0 auto;
+			font-size: 0.9em;
+		}
+		button {
+			width: 90%;
+			margin-left: 0;
+			margin-bottom: 5%;
+			margin: 0 auto;
+		}
+		
+		#add{
+			margin-top: 5%;
+		}
+		#return{
+			margin-top: 5%;
+			margin-bottom: 5%;
+		}
+
+		/*footer*/
+
+		.footer-distributed .footer-left,
+		.footer-distributed .footer-right{
+			text-align: center;
+		}
+
+		.footer-distributed .footer-right{
+			float: none;
+			margin: 0 auto 20px;
+		}
+
+		.footer-distributed .footer-left p.footer-links{
+			line-height: 1.8;
+		}
+}
